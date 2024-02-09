@@ -6,7 +6,7 @@
     <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
     <script src="https://cdn.quilljs.com/1.3.6/quill.snow.js"></script>
     <!-- Inclure le module de couleur de Quill -->
-<script src="https://cdn.quilljs.com/1.3.6/quill.color-picker.min.js"></script>
+    <script src="https://cdn.quilljs.com/1.3.6/quill.color-picker.min.js"></script>
 
 
     <!-- Styles supplémentaires pour la mise en forme -->
@@ -20,6 +20,12 @@
             height: 65vh;
             overflow-y: auto;
             border: 1px solid #ddd;
+        }
+
+        /* Style pour le bouton d'envoi */
+        #monFormulaire button[type="submit"] {
+            background-color: #343a40; /* Fond de couleur */
+            color: white; /* Texte en blanc */
         }
     </style>
 
@@ -38,7 +44,7 @@
                 <!-- Champ caché pour stocker le contenu de l'éditeur -->
                 <input type="hidden" id="message" name="message">
                 <!-- Bouton d'envoi -->
-                <button type="submit" class="btn btn-info mb-3">{{ __('Envoyer') }}</button>
+                <button type="submit" class="btn mb-3">{{ __('Envoyer') }}</button>
             </form>
         </div>
     </div>
