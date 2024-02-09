@@ -11,6 +11,10 @@
 
     <!-- Styles supplémentaires pour la mise en forme -->
     <style>
+        body{
+            background-color: #e5e7eb;
+        }
+
         input,
         textarea {
             margin-bottom: 10px;
@@ -26,7 +30,15 @@
         #monFormulaire button[type="submit"] {
             background-color: #343a40; /* Fond de couleur */
             color: white; /* Texte en blanc */
+            margin-bottom: 15px;
         }
+
+        .block{
+            background-color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+
     </style>
 
     <!-- Contenu principal de la page -->
@@ -39,12 +51,14 @@
             <!-- Formulaire d'envoi avec le champ 'name', l'éditeur Quill et le bouton 'Envoyer' -->
             <form action="{{ route('contact.store') }}" method="post" id="monFormulaire" class="form-inline">
                 @csrf
+                <div class="block">
                 <!-- Éditeur Quill -->
                 <div id="editor" style="height: 200px;"></div>
                 <!-- Champ caché pour stocker le contenu de l'éditeur -->
                 <input type="hidden" id="message" name="message">
                 <!-- Bouton d'envoi -->
-                <button type="submit" class="btn mb-3">{{ __('Envoyer') }}</button>
+                </div>
+                <button type="submit" class="btn ">{{ __('Envoyer') }}</button>
             </form>
         </div>
     </div>
