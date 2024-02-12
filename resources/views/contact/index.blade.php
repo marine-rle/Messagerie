@@ -33,6 +33,12 @@
             margin-bottom: 15px;
         }
 
+        #monFormulaire button[type="submit"]:hover {
+            background-color: #4c5054; /* Fond de couleur */
+            color: white; /* Texte en blanc */
+            margin-bottom: 15px;
+        }
+
         .block{
             background-color: #ffffff;
             margin-bottom: 15px;

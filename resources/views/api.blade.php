@@ -10,26 +10,26 @@ while ($message = $recupMessage->fetch()) {
     $class = $counter % 2 == 0 ? 'even' : 'odd';
 ?>
 
-    <div class="message-container <?= $class ?>">
-        <div class="message-header">
-            <strong><?= $message['name'] ?></strong>
-            <?php
+<div class="message-container <?= $class ?>">
+    <div class="message-header">
+        <strong style="color: #343a40"><?= $message['name'] ?></strong>
+        <?php
             // Vérifier si l'utilisateur actuel est un administrateur avant d'afficher le bouton supprimer
             if (auth()->user()->is_admin == 1) {
             ?>
-                <form action="{{ route('contact.destroy', $message['id']) }}" method="post">
-                    @csrf
-                    @method('DELETE')
-                    <button type="submit">Supprimer</button>
-                </form>
-            <?php
+        <form action="{{ route('contact.destroy', $message['id']) }}" method="post" id="message">
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="btn ">Supprimer</button>
+        </form>
+        <?php
             }
             ?>
-        </div>
-        <div class="message-body">
-            <?= $message['message'] ?>
-        </div>
     </div>
+    <div class="message-body">
+        <?= $message['message'] ?>
+    </div>
+</div>
 <?php
 }
 ?>
@@ -48,15 +48,30 @@ while ($message = $recupMessage->fetch()) {
     }
 
     .message-body {
+        margin-top: 20px;
         padding-left: 20px;
+        line-height: 0.2;
     }
+
 
     .odd {
-        background-color: #f2f2f2; /* Couleur de fond pour les messages impairs */
+        background-color: #f2f2f2;
     }
 
-    /* Vous pouvez définir un style différent pour les messages pairs si nécessaire */
+
     .even {
-        /* background-color: #ffffff; */
+        background-color: #ffffff;
+    }
+
+    #message button[type="submit"] {
+        background-color: #343a40;
+        color: white;
+        font-size: small
+    }
+
+    #message button[type="submit"]:hover {
+        background-color: #4c5054;
+        color: white;
+        font-size: small
     }
 </style>
