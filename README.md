@@ -72,7 +72,7 @@ services:
 #    - send: 27017
 #      to: 27017
 ````
-- Modifier le fichier .env dans C:\Users\marin\Homestead\code\messagerie
+- Modifier le fichier .env dans C:\Users\user\Homestead\code\messagerie
 ````
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
