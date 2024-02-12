@@ -18,7 +18,7 @@ Installer Laravel en Homestead. Créer un fichier code dans le dossier Homestead
 192.168.56.56 messagerie.test
 
 ````
-- Modifier le fichier Homestead.yaml  dans C:\Users\(user)\Homestead\
+- Modifier le fichier Homestead.yaml  dans C:\Users\user\Homestead\
 
 ````
 ---
