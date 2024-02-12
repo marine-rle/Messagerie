@@ -21,6 +21,15 @@ return new class extends Migration
             $table->boolean('is_admin')->default(false);
             $table->timestamps();
         });
+
+          // Ajout de l'utilisateur administrateur
+          \App\Models\User::create([
+            'name' => 'Admin',
+            'email' => 'admin@example.com',
+            'password' => Hash::make('8p4U4khSF78abC'),
+            'is_admin' => true,
+            'email_verified_at' => now(),
+        ]);
     }
 
     /**
