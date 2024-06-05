@@ -1,4 +1,4 @@
-## Messagerie
+## Projet Messagerie
 
 ### Installation
 Installer Laravel en Homestead. Créer un fichier code dans le dossier Homestead. Télécharger le code et le placer dans Homestead/code/
